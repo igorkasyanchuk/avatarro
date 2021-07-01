@@ -26,7 +26,7 @@ It you need rounded avatars just add CSS to the img.
 <%= image_tag Avatarro.image("IK"), size: '32x32', style: 'border-radius: 50%' %>
 ```
 
-More samples:
+More samples (shown on screenshot above):
 
 ```erb
 <div class="card">
