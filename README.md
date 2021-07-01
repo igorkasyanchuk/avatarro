@@ -14,6 +14,14 @@ Sample:
 You can generate avatar using 2 methods, depending how you need to use it. Using `Avatarro.svg` method to embed svg inside HTML or `Avatarro.image` method to generate Base64 image use with image_tag.
 
 ```erb
+  <%= image_tag Avatarro.image("Igor Kasyanchuk", solid: true), size: '24x24' %>
+  <%= image_tag Avatarro.image("IK"), size: '32x32' %>
+  <%= raw Avatarro.svg("IK") %>
+```
+
+More samples:
+
+```erb
 <div class="card">
   <h3>Avatar Generator for the<br>APP</h3>
   <div class="people round">
@@ -69,6 +77,27 @@ You can generate avatar using 2 methods, depending how you need to use it. Using
 </div>
 ```
 
+## Configuration
+
+Example of the possible options (see args hash):
+
+```ruby
+  def Avatarro.template(initials, args = {})
+    data        = args[:random] ? GRADIENTS.sample : GRADIENTS[index(initials) % GRADIENTS.size]
+    start       = args[:start].presence || data[0]
+    finish      = args[:solid] ? data[0] : (args[:finish].presence || data[1])
+    degree      = args[:degree].presence || data[2].presence || 90
+    color       = args[:color].presence || data[3].presence || '#FFF'
+    width       = args[:width].presence || 64
+    height      = args[:height].presence || 64
+```
+
+For example:
+
+```erb
+  <%= image_tag Avatarro.image("WA", random: true, width: 300, height: 300, color: 'red') %>
+```
+
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -94,6 +123,10 @@ Contribution directions go here.
 - CI
 - better graphics and more gradients
 - radial gradient
+
+## Credits
+
+The idea of this gem came after reading an article: https://kukicola.io/posts/creating-google-like-letter-avatars-using-erb-generated-svgs/. We actually did something similar with HTML/CSS on our project too, but with SVG solution looks just better.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
