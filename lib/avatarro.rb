@@ -77,10 +77,18 @@ module Avatarro
         </linearGradient>
         <rect width="100%" height="100%" fill="url(##{gradient_id})" />
         <text fill="#{color}" font-family="Open Sans,Helvetica,Arial,sans-serif" font-size="#{1 + height / 2}" font-weight="500" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">
-          #{initials}
+          #{Avatarro.format_initials initials}
         </text>
       </svg>
     }
+  end
+
+  def Avatarro.format_initials(initials)
+    if initials.size > 2
+      initials.scan(/([[:alpha:]])[[:alpha:]]*/).flatten.join.upcase
+    else
+      initials
+    end
   end
 
 end
