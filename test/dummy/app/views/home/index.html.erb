@@ -1,0 +1,95 @@
+<style>
+  body {
+    font-family: Consolas;
+  }
+
+  .card {
+    float: left;
+    border: 1px solid #777;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 10px;
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+  }
+
+  .people {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .people.round img {
+    border-radius: 50%;
+  }
+
+  .people img {
+    padding: 0;
+    margin: 0;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+</style>
+
+
+<div class="card">
+  <h3>Avatar Generator for the<br>APP</h3>
+  <div class="people round">
+    <%= image_tag Avatarro.image("OI"), size: '16x16' %>
+    <%= image_tag Avatarro.image("JS"), size: '16x16' %>
+    <%= image_tag Avatarro.image("MK"), size: '16x16' %>
+    <%= image_tag Avatarro.image("ZP"), size: '16x16' %>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Generates SVG for the html</h3>
+  <div class="people round">
+    <%= image_tag Avatarro.image("OI", solid: true), size: '24x24' %>
+    <%= image_tag Avatarro.image("JS", solid: true), size: '24x24' %>
+    <%= image_tag Avatarro.image("MK", solid: true), size: '24x24' %>
+    <%= image_tag Avatarro.image("ZP", solid: true), size: '24x24' %>
+    <%= image_tag Avatarro.image("😁", solid: true), size: '24x24' %>
+    <%= image_tag Avatarro.image("😂", solid: true), size: '24x24' %>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Or can be used as<br> img src="..."</h3>
+  <div class="people">
+    <%= image_tag Avatarro.image("ZO", random: true), size: '32x32' %>
+    <%= image_tag Avatarro.image("AB", random: true), size: '32x32' %>
+    <%= image_tag Avatarro.image("ФЯ", random: true), size: '32x32' %>
+    <%= image_tag Avatarro.image("DA", random: true), size: '32x32' %>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="card">
+  <%= raw Avatarro.svg("IK") %>
+  <%= raw Avatarro.svg("WS") %>
+  <%= raw Avatarro.svg("AP") %>
+  <hr>
+  <%= image_tag Avatarro.image("WW") %>
+  <%= image_tag Avatarro.image("OI", random: true) %>
+  <%= image_tag Avatarro.image("OI"), style: 'border-radius: 50%', size: '32x32' %>
+  <%= image_tag Avatarro.image("OZ", random: true), style: 'border-radius: 50%', size: '16x16' %>
+</div>
+
+
+<div class="card">
+  <%= image_tag Avatarro.image("WA", random: true, width: 300, height: 300) %>
+</div>
+
+<div class="card">
+  <%= image_tag Avatarro.image("⚡", random: true, width: 300, height: 300) %>
+</div>
