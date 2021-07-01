@@ -18,6 +18,7 @@ You can generate avatar using 2 methods, depending how you need to use it. Using
   <%= image_tag Avatarro.image("Igor Kasyanchuk", solid: true), size: '24x24' %>
   <%= image_tag Avatarro.image("IK"), size: '32x32' %>
   <%= raw Avatarro.svg("IK") %>
+  <%= image_tag Avatarro.image(current_user.full_name, random: true, solid: true), size: '20x20', style: 'margin-right: 5px; border-radius: 50%' %>
 ```
 
 It you need rounded avatars just add CSS to the img.
