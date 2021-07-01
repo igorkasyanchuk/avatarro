@@ -20,6 +20,12 @@ You can generate avatar using 2 methods, depending how you need to use it. Using
   <%= raw Avatarro.svg("IK") %>
 ```
 
+It you need rounded avatars just add CSS to the img.
+
+```erb
+<%= image_tag Avatarro.image("IK"), size: '32x32', style: 'border-radius: 50%' %>
+```
+
 More samples:
 
 ```erb
