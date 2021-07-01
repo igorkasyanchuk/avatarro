@@ -11,6 +11,8 @@ Sample:
 
 ## Usage
 
+You can generate avatar using 2 methods, depending how you need to use it. Using `Avatarro.svg` method to embed svg inside HTML or `Avatarro.image` method to generate Base64 image use with image_tag.
+
 ```erb
 <div class="card">
   <h3>Avatar Generator for the<br>APP</h3>
