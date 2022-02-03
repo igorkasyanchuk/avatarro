@@ -1,5 +1,8 @@
 # Avatarro
 
+[![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
+[![https://www.patreon.com/igorkasyanchuk](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/patron.svg?raw=true)](https://www.patreon.com/igorkasyanchuk)
+
 Google-style avatar generator for your app. 
 
 This gem generates SVG which can be used inside your HTML or img(src) to display google-style avatar with initials.
